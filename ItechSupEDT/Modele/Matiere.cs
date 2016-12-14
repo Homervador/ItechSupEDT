@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ItechSupEDT.Modele
 {
-    public class Matiere
+    public class Matiere : MultiSelectedObject
     {
         private String nom;
         private List<Formation> lstFormations;
@@ -17,7 +17,7 @@ namespace ItechSupEDT.Modele
             get { return this.nom; }
             set { this.nom = value; }
         }
-        public List<Formation> LstMatire
+        public List<Formation> LstFormations
         {
             get { return this.lstFormations; }
             set { this.lstFormations = value; }
@@ -38,6 +38,11 @@ namespace ItechSupEDT.Modele
             this.LstSessions = new List<Session>();
             this.LstFormateurs = new List<Formateur>();
             this.lstFormations = new List<Formation>();
+        }
+
+        public String getNom()
+        {
+            return this.Nom;
         }
     }
 }

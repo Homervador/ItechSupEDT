@@ -55,10 +55,52 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Ajout_UC\AjoutEleve.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ajout_UC\AjoutFormateur.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ajout_UC\AjoutFormation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ajout_UC\AjoutMatiere.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ajout_UC\AjoutPromotion.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ajout_UC\MutliSelectPickList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="Ajout_UC\AjoutEleve.xaml.cs">
+      <DependentUpon>AjoutEleve.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ajout_UC\AjoutFormateur.xaml.cs">
+      <DependentUpon>AjoutFormateur.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ajout_UC\AjoutFormation.xaml.cs">
+      <DependentUpon>AjoutFormation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ajout_UC\AjoutMatiere.xaml.cs">
+      <DependentUpon>AjoutMatiere.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ajout_UC\AjoutPromotion.xaml.cs">
+      <DependentUpon>AjoutPromotion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ajout_UC\MutliSelectPickList.xaml.cs">
+      <DependentUpon>MutliSelectPickList.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -76,6 +118,7 @@
     <Compile Include="Modele\Formateur.cs" />
     <Compile Include="Modele\Formation.cs" />
     <Compile Include="Modele\Matiere.cs" />
+    <Compile Include="Modele\MultiSelectedObject.cs" />
     <Compile Include="Modele\Promotion.cs" />
     <Compile Include="Modele\Salle.cs" />
     <Compile Include="Modele\Session.cs" />
@@ -107,7 +150,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>

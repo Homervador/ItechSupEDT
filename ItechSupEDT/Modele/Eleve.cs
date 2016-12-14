@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ItechSupEDT.Ajout_UC;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ItechSupEDT.Modele
 {
-    public class Eleve
+    public class Eleve : MultiSelectedObject
     {
         private String nom;
         private String prenom;
@@ -49,6 +50,10 @@ namespace ItechSupEDT.Modele
         public int GetNbAbsence(DateTime dateDebut, DateTime dateFin)
         {
             return this.LstAbsences.Count;
+        }
+        string MultiSelectedObject.getNom()
+        {
+            return this.Nom;
         }
     }
 }
