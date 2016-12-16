@@ -12,6 +12,14 @@ namespace ItechSupEDT.Modele
         private float nbHeuresTotal;
         private List<Promotion> lstPromotions;
         private List<Matiere> lstMatiere;
+
+        private int id;
+
+        public int Id
+        {
+            get { return id; }
+        }
+
         public String Nom
         {
             get { return this.nom; }
@@ -35,6 +43,12 @@ namespace ItechSupEDT.Modele
         public Formation(String _nom)
         {
             this.Nom = _nom;
+        }
+        public Formation(int id, String _nom, float _nbHeuresTotal)
+        {
+            this.id = id;
+            this.Nom = _nom;
+            this.NbHeuresTotal = _nbHeuresTotal;
         }
         public Formation(String _nom, float _nbHeuresTotal, List<Matiere> _lstMatiere)
         {

@@ -10,16 +10,22 @@
         <StackPanel>
             <TextBlock x:Name="tbk_errorMessage" />
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Margin="5">
-            <TextBlock Margin="5,5,5,5">Nom de la formation : </TextBlock>
-            <TextBox x:Name="tb_nomFormation" MinWidth="150"/>
-        </StackPanel>
-        <StackPanel Orientation="Horizontal">
-            <TextBlock Margin="5,5,5,5">Durée de la formation :</TextBlock>
-            <TextBox x:Name="tb_dureeFormation" MinWidth="150"/>
-        </StackPanel>
-        <StackPanel Margin="5">
+        <StackPanel x:Name="sp_Ajout">
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Margin="5,5,5,5">Nom de la formation :</TextBlock>
+                <TextBox x:Name="tb_nomFormation" MinWidth="150"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Margin="5,5,5,5">Durée de la formation :</TextBlock>
+                <TextBox x:Name="tb_dureeFormation" MinWidth="150"/>
+            </StackPanel>
+            <StackPanel Margin="5">
             <Button x:Name="btn_ajoutFormation" Content="Ajouter" Width="100" Click="btn_ajoutFormation_Click"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel x:Name="sp_valider" HorizontalAlignment="Center">
+            <TextBlock x:Name="tbk_retourMessage" HorizontalAlignment="Center" Margin="10,10,10,0"/>
+            <Button x:Name="btn_nouveau" Content="Nouvelle Formation" Width="120" Click="btn_nouveau_Click" MinWidth="100" Margin="10,10,10,10"/>
         </StackPanel>
     </StackPanel>
 </UserControl>
