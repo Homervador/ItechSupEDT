@@ -21,13 +21,18 @@
             <StackPanel MinWidth="50"/>
         </DockPanel>
         <DockPanel LastChildFill="True" Margin="5">
-            <TextBlock DockPanel.Dock="Left">ail du formateur :</TextBlock>
+            <TextBlock DockPanel.Dock="Left">mail du formateur :</TextBlock>
             <TextBox DockPanel.Dock="Right" x:Name="tb_mailFormateur" MinWidth="150"/>
+            <StackPanel MinWidth="50"/>
+        </DockPanel>
+        <DockPanel LastChildFill="True" Margin="5">
+            <TextBlock DockPanel.Dock="Left">Numéro de téléphone:</TextBlock>
+            <TextBox DockPanel.Dock="Right" x:Name="tb_numeroFormateur" MinWidth="150"/>
             <StackPanel MinWidth="50"/>
         </DockPanel>
         <ContentControl x:Name="MultiSelect"/>
         <StackPanel Margin="5">
-            <Button x:Name="btn_ajoutFormation" Content="Ajouter" Width="100"/>
+            <Button x:Name="btn_ajoutFormation" Content="Ajouter" Width="100" Click="btn_ajoutFormation_click"/>
         </StackPanel>
     </StackPanel>
 </UserControl>

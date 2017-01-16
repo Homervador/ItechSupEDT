@@ -14,6 +14,13 @@ namespace ItechSupEDT.Modele
         private List<Eleve> lstEleves;
         private Formation formation;
         private List<Session> lstSessions;
+
+        private int id;
+
+        public int Id
+        {
+            get { return id; }
+        }
         public String Nom
         {
             get { return this.nom; }
@@ -56,6 +63,18 @@ namespace ItechSupEDT.Modele
             this.Formation = _formation;
             this.LstSessions = new List<Session>();
             this.LstEleves = _lstEleves;
+        }
+        public Promotion( Formation _formation)
+        {
+            this.Formation = _formation;
+        }
+        public Promotion(int id, String _nom, DateTime _dateDebut, DateTime _dateFin, Formation _formation)
+        {
+            this.Nom = _nom;
+            this.DateDebut = _dateDebut;
+            this.DateFin = _dateFin;
+            this.LstSessions = new List<Session>();
+            this.Formation = _formation;
         }
         public void AddEleve(Eleve eleve)
         {

@@ -42,14 +42,14 @@ namespace ItechSupEDT
 
         private void mi_ajout_promotion_Click(object sender, RoutedEventArgs e)
         {
-            List<MultiSelectedObject> lstEleves = new List<MultiSelectedObject>();
-            AjoutPromotion ajoutPromotion = new AjoutPromotion(new List<Formation>(), lstEleves);
+            List<Nameable> lstEleves = new List<Nameable>();
+            AjoutPromotion ajoutPromotion = new AjoutPromotion();
             this.Ajout.Content = ajoutPromotion;
         }
 
         private void mi_ajout_formateur_Click(object sender, RoutedEventArgs e)
         {
-            List<MultiSelectedObject> lstMatiere = new List<MultiSelectedObject>();
+            List<Nameable> lstMatiere = new List<Nameable>();
             AjoutFormateur ajoutFormateur = new AjoutFormateur(lstMatiere);
             this.Ajout.Content = ajoutFormateur;
         }
